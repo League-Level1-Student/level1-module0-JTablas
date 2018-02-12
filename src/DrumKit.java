@@ -66,7 +66,7 @@ drumLabelWithImage.addMouseListener(null);
    	 // 16. If they clicked on the drumImage...
    	 
    		 // 17. ...use the playSound method to play a drum sound.
-   	 playSound(String noise = "noisesofdrums.wav");
+   	 playSound("noisesofdrums.wav");
    	 // 18. Add more images to make a drumkit. Remember to add a mouse listener to each one.
     }
 
