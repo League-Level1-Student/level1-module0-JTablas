@@ -17,9 +17,12 @@ import javax.swing.JOptionPane;
 
 public class PhotoQuiz {
 
+	
+	
 	public static void main(String[] args) throws Exception {
 		Frame quizWindow = new Frame();
 		quizWindow.setVisible(true);
+		
 		
 		// 1. find an image on the internet, and put its URL in a String variable (from your browser, right click on the image, and select â€œCopy Image URLâ€�)
 		String doggo = "https://static.boredpanda.com/blog/wp-content/uploads/2017/11/This-friendship-between-these-two-dogs-and-this-kitten-will-love-you-5a205d29197e6__880.jpg";
@@ -43,17 +46,25 @@ public class PhotoQuiz {
 		JOptionPane.showMessageDialog(null, "INCORRECT");
 		}
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
-		
+		quizWindow.remove(doggos);
 		// 10. find another image and create it (might take more than one line of code)
-
+		String lettuce = "https://cdn.shopify.com/s/files/1/1003/1822/products/iceberglettuce1024_84897056_2048x2048.jpg?v=1479880606";
+		Component letus;
+		letus = createImage(lettuce);
 		// 11. add the second image to the quiz window
-
+		quizWindow.add(letus);
 		// 12. pack the quiz window
-
+		quizWindow.pack();
 		// 13. ask another question
-
+		String question2 = JOptionPane.showInputDialog("What is this?");
+		System.out.println(question2);
 		// 14+ check answer, say if correct or incorrect, etc.
-
+		if(question2.equalsIgnoreCase("Lettuce")){
+		JOptionPane.showMessageDialog(null, "You're right.");
+		} else{
+		JOptionPane.showMessageDialog(null, "Wrong");
+		}
+		quizWindow.remove(letus);
 	}
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {

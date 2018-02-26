@@ -35,41 +35,57 @@ public class BodyPartQuiz {
 		int score = 0;
 		// 2. Set the size of the window in the initializeGui() method below
 		initializeGui();
-		for (int i = 0; i < 4; i++) {
-			
+		
 			// 4. Ask the user who this person is and store their answer
 			String guess= JOptionPane.showInputDialog("who is this?");
 			System.out.println(guess);
 			if(guess.equalsIgnoreCase("Arnold")){
 			score=score+1;
 			JOptionPane.showMessageDialog(null, "You are right! Plus one point +1. Score "+score );
+			} else{
+			JOptionPane.showMessageDialog(null, "You are wrong. NO POINTS. SCORE "+ score);
 			}
+			showNextImage();
 			// 5. Check their answer. If they guessed correctly:
 			// -- Tell them they are right and increase the score by 1
+			String guesss= JOptionPane.showInputDialog("who is this?");
+			System.out.println(guess);
 			if(guess.equalsIgnoreCase("Leonardo")){
-				score=score+1;
-				JOptionPane.showMessageDialog(null, "You are right! Plus one point +1. Score "+score );
-				}
+			score=score+1;
+			JOptionPane.showMessageDialog(null, "You are right! Plus one point +1. Score "+score );
+			} else{
+			JOptionPane.showMessageDialog(null, "You are wrong. NO POINTS. SCORE "+ score);
+			}
+			showNextImage();
+			
+			String guessss= JOptionPane.showInputDialog("who is this?");
+			System.out.println(guess);
+			if(guess.equalsIgnoreCase("Morgan")){
+			score=score+1;
+			JOptionPane.showMessageDialog(null, "You are right! Plus one point +1. Score "+score );
+			} else{
+			JOptionPane.showMessageDialog(null, "You are wrong. NO POINTS. SCORE "+ score);
+			}
+			showNextImage();
 			// 6. Otherwise:
 			// -- Tell them they are wrong and who the person is
-			if(guess.equalsIgnoreCase("Morgan")){
-				score=score+1;
-				JOptionPane.showMessageDialog(null, "You are right! Plus one point +1. Score "+score );
-				}
+			String guesssss= JOptionPane.showInputDialog("who is this?");
+			System.out.println(guess);
 			if(guess.equalsIgnoreCase("Jack")){
-				score=score+1;
-				JOptionPane.showMessageDialog(null, "You are right! Plus one point +1. Score "+score );
-				} else{
-				JOptionPane.showMessageDialog(null, "You are wrong. NO POINTS. SCORE "+ score);
-				}
+			score=score+1;
+			JOptionPane.showMessageDialog(null, "You are right! Plus one point +1. Score "+score );
+			} else{
+			JOptionPane.showMessageDialog(null, "You are wrong. NO POINTS. SCORE "+ score);
+			}
+			
 			// 7. Use the showNextImage() method below to get the next image
-			showNextImage();
+			
 		    // 8. Show them their current score
 			
 			// 9. .... repeat for all your images.....
 
 
-		}
+		
 
 	}
 
